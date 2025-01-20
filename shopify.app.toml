@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "22b82055017b583a0015e5b761888796"
+name = "root-app"
+handle = "root-app-1"
+application_url = "https://worm-notebook-tract-development.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-1add1160.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://worm-notebook-tract-development.trycloudflare.com/auth/callback",
+  "https://worm-notebook-tract-development.trycloudflare.com/auth/shopify/callback",
+  "https://worm-notebook-tract-development.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2025-01"
+
+[pos]
+embedded = false
