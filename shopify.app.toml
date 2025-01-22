@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "22b82055017b583a0015e5b761888796"
-application_url = "https://inclusion-cruz-broadband-hide.trycloudflare.com"
+application_url = "https://defense-estonia-super-highlight.trycloudflare.com"
 embedded = true
 name = "root-app"
 handle = "root-app-1"
@@ -20,9 +20,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://inclusion-cruz-broadband-hide.trycloudflare.com/auth/callback",
-  "https://inclusion-cruz-broadband-hide.trycloudflare.com/auth/shopify/callback",
-  "https://inclusion-cruz-broadband-hide.trycloudflare.com/api/auth/callback"
+  "https://defense-estonia-super-highlight.trycloudflare.com/auth/callback",
+  "https://defense-estonia-super-highlight.trycloudflare.com/auth/shopify/callback",
+  "https://defense-estonia-super-highlight.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

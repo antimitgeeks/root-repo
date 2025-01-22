@@ -1,4 +1,6 @@
 const { shopify } = require("../../shopify.js");
+const Partners = require("../models/partners.model.js");
+const partnerService = require("../routes/index.js");
 
 exports.shopAuthenticate = async (request, response, next) => {
     try {
@@ -26,12 +28,16 @@ exports.authenticateUser = async (req, res, next) => {
 
     let storeName = await shopify.config.sessionStorage.findSessionsByShop(shop);
     if (!shop) {
+        console.log("shop not found");
         res.send(400).json({ message: "testing..........................." })
     }
     if (storeName?.length) {
         if (shop === storeName[0].shop) {
             res.locals.shopify = storeName[0];
             req.currentShop = storeName[0].shop;
+            const details = await Partners.findOne({ myshopify_domain: req.currentShop });
+            req.currentPartnerInfo = details
+
             next();
         } else {
             res.send(400).json({ message: "testing..........................." })
